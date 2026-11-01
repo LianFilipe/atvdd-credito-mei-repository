@@ -1,0 +1,28 @@
+codigo_ibge,sigla,nome,id_regiao
+11,RO,Rondônia,1
+12,AC,Acre,1
+13,AM,Amazonas,1
+14,RR,Roraima,1
+15,PA,Pará,1
+16,AP,Amapá,1
+17,TO,Tocantins,1
+21,MA,Maranhão,2
+22,PI,Piauí,2
+23,CE,Ceará,2
+24,RN,Rio Grande do Norte,2
+25,PB,Paraíba,2
+26,PE,Pernambuco,2
+27,AL,Alagoas,2
+28,SE,Sergipe,2
+29,BA,Bahia,2
+31,MG,Minas Gerais,4
+32,ES,Espírito Santo,4
+33,RJ,Rio de Janeiro,4
+35,SP,São Paulo,4
+41,PR,Paraná,5
+42,SC,Santa Catarina,5
+43,RS,Rio Grande do Sul,5
+50,MS,Mato Grosso do Sul,3
+51,MT,Mato Grosso,3
+52,GO,Goiás,3
+53,DF,Distrito Federal,3
