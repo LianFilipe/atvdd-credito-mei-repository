@@ -60,8 +60,8 @@ View analítica com indicadores         → vw_credito_mei_indicadores
 
 - A base original do BCB é composta por microdados de grande volume; a versão final ocupa **cerca de 8 MB** no banco, muito abaixo do limite de 1 GB do plano gratuito da Aiven.
 - **Todos os 162 registros possuem dados do BCB** (nenhuma UF/ano sem informação).
-- **O número de operações está indisponível em 100% dos registros.** _A completar: motivo (ex.: não divulgado pela fonte nesse nível de agregação)._ A coluna foi mantida, com uma flag explicando a ausência, para preservar a estrutura da fonte e deixar explícito que o dado falta na origem e não foi perdido no tratamento.
-- Há forte concentração da carteira na Região Nordeste (cerca de 74% do total no período). _A completar: explicação após confirmar o filtro aplicado na fonte._
+- **O número de operações está indisponível em 100% dos registros.** A coluna foi mantida, com uma flag explicando a ausência, para preservar a estrutura da fonte e deixar explícito que o dado falta na origem e não foi perdido no tratamento.
+- Há forte concentração da carteira na Região Nordeste (cerca de 74% do total no período).
 
 ---
 
@@ -81,7 +81,7 @@ View analítica com indicadores         → vw_credito_mei_indicadores
 | Decisão | Transformação | Justificativa |
 |---|---|---|
 | **Agregação prévia** | Microdados resumidos para 1 linha por UF por ano | Reduz o volume a 162 registros (~8 MB) e atende à granularidade necessária para a análise |
-| **Recorte temporal** | Apenas 2020–2025 | _a completar_ |
+| **Recorte temporal** | Apenas 2020–2025 |
 | **Data-base anual** | Padronizada como 31/12 de cada ano | Representa a posição da carteira no fechamento do ano |
 | **Chave por código IBGE** | UFs identificadas pelo código IBGE (ex.: 29 = BA) | Permite o cruzamento direto entre BCB e IBGE sem depender de nomes |
 | **Tipagem monetária** | Valores convertidos para `numeric(20,2)` | Decimal exato, sem erros de arredondamento de ponto flutuante |
@@ -329,9 +329,9 @@ O script é idempotente (`IF NOT EXISTS` / `CREATE OR REPLACE`): pode ser execut
 ├── .env.example              Modelo das variáveis de ambiente
 ├── .env (NÃO SOBE PARA O REPOSITORIO POR QUESTÕES DE SEGURANÇA)
 ├── data/
-│   ├── original/             (a completar) Base original ou links das fontes
+│   ├── original/             (a completar @TauanGramacho) Base original ou links das fontes
 │   └── tratada/              Base tratada, um CSV por tabela
-├── etl/                      (a completar) Código de tratamento e carga
+├── etl/                      (a completar @TauanGramacho) Código de tratamento e carga
 ├── sql/
 │   └── schema.sql            Criação de tabelas, chaves, índice e view
 └── infra/                    Terraform da infraestrutura na Aiven
